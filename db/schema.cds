@@ -46,13 +46,14 @@ entity CALCVIEW {
 
 }
 
-// @cds.persistence.exists
-// @cds.persistence.table
-// entity CALCVIEW {
-//     key ID          : UUID   @title: 'UUID:UUID';
-//         NAME        : String @title: 'NAME.NAME';
-//     key ID1         : UUID   @title: 'ID1.ID1';
-//         DESCRIPTION : String @title: 'DESCRIPTION.DESCRIPTION';
-//         CUSTOMER_ID : String @title: 'CUSTOMER_ID.CUSTOMER_ID';
-
-// }
+@cds.persistence.exists
+@cds.persistence.table
+entity SQLVIEW {
+    key CustomerID          : UUID;
+        CustomerName        : String;
+        IncidentID          : UUID;
+        IncidentDescription : String;
+        AddressID           : UUID;
+        Street              : String;
+        City                : String;
+}

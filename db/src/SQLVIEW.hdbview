@@ -1,0 +1,13 @@
+VIEW SQLVIEW AS
+SELECT Customer.ID AS CustomerID,
+  Customer.name AS CustomerName,
+  Incidents.ID AS IncidentID,
+  Incidents.description AS IncidentDescription,
+  Addresses.ID AS AddressID,
+  Addresses.street AS Street,
+  Addresses.city AS City
+FROM NAMESPACENAME_CUSTOMER AS Customer
+  LEFT OUTER JOIN NAMESPACENAME_INCIDENTS AS Incidents
+ ON Incidents.customer_ID = Customer.ID
+  LEFT OUTER JOIN NAMESPACENAME_ADDRESSES AS Addresses
+ ON Addresses.customer_ID = Customer.ID;
